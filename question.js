@@ -1,10 +1,13 @@
-window.age = 12;
+global.age = 12;
 
 function Person() {
   this.age = 34;
   setTimeout(function () {
-    console.log(this.age);
-  }, 10000);
+    console.log(age);
+  }, 1000);
+  setTimeout(() => {
+    console.log(age);
+  }, 1000);
 }
 
 var p = new Person();
