@@ -1,0 +1,39 @@
+BOM Browser Object Model
+- superclass : window
+- every browser implements window
+
+window 
+    - subclasses
+    - window.navigator (also used in angular routing)
+    - window.document.forms
+    - window.frames
+    - window.history (eg. window.history.go(-1))
+
+
+    <html>
+        <body>
+            <form>
+                <input id="id"></input>
+            </form>
+        </body>
+    </html>
+
+    - window.document(DOM)
+        - window.document.forms[0].controls[0].value
+        - window.document.getElementById()   // only if one forms
+
+        // manipulate
+        - window.document.forms[0].controls[0].style.color = 'blue'
+
+    - DOM starts with <body>
+    - DOM is different for different browsers. Same js may not work for IE6 which works for IE7
+    - Therefore DOM is not browser compatible
+    - Modern browser use DOM 3
+
+    - shadow dom is internal representation of real dom in binary
+
+    - window.localStorage (permanent)
+    - window.sessionStorage (temporary)
+
+ <body> is root (document.root)   
+

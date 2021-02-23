@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Event Bubble and Capture</title>
+  </head>
+  <body onclick="onclickroot()">
+    <div>Learning event bubble</div>
+    <div onclick="onclickdiv(event)">
+      Welcome
+      <p onclick="onclickp(event)">
+        Learning js
+        <!-- <a href="#" onclick="console.log('link clicked')">Visit Google</a> -->
+        <a href="#" onclick="onclicka(event)">Visit Google</a>
+      </p>
+    </div>
+    <script>
+      function onclicka(event) {
+        console.log('href clicked');
+        console.log(event.target.tagName);
+      }
+
+      function onclickp(event) {
+        console.log('p tag clicked');
+        console.log(event.target.tagName);
+        // event.stopPropogation();
+        event.stopPropagation();
+      }
+
+      function onclickdiv(event) {
+        console.log('div tag clicked');
+        console.log(event.target.tagName);
+      }
+
+      function onclickroot() {
+        console.log('body clicked');
+      }
+    </script>
+  </body>
+</html>
